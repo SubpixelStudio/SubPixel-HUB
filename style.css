@@ -11,6 +11,7 @@ body {
   color: #b9f7ff;
   font-family: 'Orbitron', sans-serif;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 /* ===========================
@@ -20,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 10px 60px;
   background: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid #0ff;
   position: sticky;
@@ -58,8 +59,20 @@ section {
   transition: opacity 0.4s ease;
 }
 
-#noticias, #ferramentas, #projetos, #contato {
-  padding: 80px 20px;
+#noticias {
+  padding: 211px 20px;
+}
+
+#ferramentas{
+  padding: 120px 20px;
+}
+
+#contato {
+  padding: 117px 20px;
+}
+
+#projetos {
+  padding: 175px 20px;
 }
 section.active {
   display: block;
@@ -181,7 +194,7 @@ button:hover {
 =========================== */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   border-top: 1px solid #0ff3;
   background: #000;
   font-size: 0.9rem;
