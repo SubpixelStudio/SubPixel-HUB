@@ -13,7 +13,9 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -46,7 +48,33 @@ body {
   color: #00ffff;
 }
 
-/* Hero */
+/* ===========================
+   SEÇÕES GERAIS
+=========================== */
+section {
+  display: none;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#noticias, #ferramentas, #projetos, #contato {
+  padding: 80px 20px;
+}
+section.active {
+  display: block;
+  opacity: 1;
+}
+
+.content-section h2 {
+  color: #00ffff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 6px #00ffff;
+}
+
+/* ===========================
+   HERO
+=========================== */
 .hero {
   text-align: center;
   padding: 140px 20px;
@@ -84,18 +112,9 @@ body {
   background: #b9f7ff;
 }
 
-/* Sections */
-.content-section {
-  padding: 80px 60px;
-  text-align: center;
-}
-
-.content-section h2 {
-  color: #00ffff;
-  margin-bottom: 30px;
-  text-shadow: 0 0 6px #00ffff;
-}
-
+/* ===========================
+   GRID / CARDS
+=========================== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -109,6 +128,9 @@ body {
   border-radius: 10px;
   border: 1px solid #0ff3;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card:hover {
@@ -116,7 +138,14 @@ body {
   border-color: #0ff;
 }
 
-/* Form */
+.card img {
+  width: 75px;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
 form {
   display: flex;
   flex-direction: column;
@@ -147,7 +176,9 @@ button:hover {
   background: #b9f7ff;
 }
 
-/* Footer */
+/* ===========================
+   FOOTER
+=========================== */
 footer {
   text-align: center;
   padding: 20px;
@@ -157,17 +188,55 @@ footer {
   opacity: 0.8;
 }
 
-/* Animation */
+/* ===========================
+   ANIMAÇÕES
+=========================== */
 @keyframes fadeIn {
   from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
 
-.card img{
-    width: 75px;
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .content-section {
+    padding: 60px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.card {
-    display: block;
-    
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 8px 18px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
